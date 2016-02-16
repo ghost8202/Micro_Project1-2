@@ -8,6 +8,11 @@ import javax.swing.JFrame;
 
 
 public class PlayMusicProgressBar extends JFrame {
+	JProgressBar current;
+    	JTextArea out;
+    	JButton find;
+    	Thread runner;
+    	int num = 0;
 	void playMusicProgressBar(){
 		setTitle("Music");
 		JFrame b = new JFrame();
@@ -22,19 +27,25 @@ public class PlayMusicProgressBar extends JFrame {
 			e.printStackTrace();
 		}
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		
+		JPanel p = new JPanel();
+        	p.setLayout(new FlowLayout());
+        	current = new JProgressBar(0, 119000);
+        	current.setValue(0);
+        	current.setStringPainted(true);
+        	p.add(current);
+        	setContentPane(p);
 	}
 	public void iterate(){
 		JProgressBar current;
 		Thread runner;
 		int num = 0;
-		while(num < 119000){
+		while(num <= 119000){
 			current.setValue(num);
 			try{
-				Thread.sleep(1000);
+				Thread.sleep(595);
 			}catch (InterruptedException e)
 			{
-		}num += 100;
+		}num += 595;
 	}
 	}
 

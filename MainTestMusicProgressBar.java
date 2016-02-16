@@ -4,6 +4,8 @@ public static void main(String[] args)
 {
 	PlayMusicProgressBar pm=new PlayMusicProgressBar();
 	pm.playMusicProgressBar();
-	pm.iterate();
+	pm.pack();
+    	pm.setVisible(true);
+    	pm.iterate();
 }
 }
